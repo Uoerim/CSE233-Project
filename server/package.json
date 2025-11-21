@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "nodemon server.js",
     "seed:classroom": "node ./src/scripts/seedSampleClassroom.js",
-    "seed:admin": "node ./src/scripts/createAdmin.js"
+    "seed:admin": "node ./src/scripts/createAdmin.js",
+    "seed:timeslots": "node ./src/scripts/seedTimeslots.js",
+    "seed:reservations": "node ./src/scripts/seedReservations.js"
   },
   "keywords": [],
   "author": "",

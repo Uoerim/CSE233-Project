@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const { login, adminCreateUser } = require('../controllers/authController');
+const { login, adminCreateUser, getAllUsers } = require('../controllers/authController');
 const { protect, requireAdmin } = require('../middleware/auth');
 
 
 router.post('/login', login);
 router.post('/admin/create-user', protect, requireAdmin, adminCreateUser);
+router.get('/users', protect, getAllUsers);
 
 router.get("/validate", protect, (req, res) => {
   res.json({

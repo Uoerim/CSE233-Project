@@ -15,3 +15,12 @@ export const validateToken = async (token) => {
     });
     return res.data;
 };
+
+export const getUserProfile = async (token) => {
+    const res = await axios.get(API_URL + "validate", {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+    return res.data;
+};
